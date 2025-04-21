@@ -1,15 +1,90 @@
-main {
-    width: 500px;
-    margin: 2rem auto;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+body {
+    background-color: hsl(0, 0%, 0%);
+}
+
+main {
+    width: 350px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buttons */
 
 button {
     height: 50px;
-    width: 50px;
+    width: 100px;
     padding: 1rem;
+    margin: 0.2rem;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    border: none;
+    background-color: hsla(0, 0%, 66%, 0.327);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+button:hover {
+    background-color: hsla(0, 0%, 41%, 0.73);
+}
+
+.gray {
+    background-color: hsla(0, 0%, 71%, 0.611);
+}
+
+.gray:hover {
+    background-color: hsla(0, 0%, 71%, 0.884);
+}
+
+.orange {
+    background-color: hsl(39, 100%, 50%);
+}
+
+.orange:hover {
+    background-color: hsla(39, 100%, 50%, 0.682);
+
+}
+
+/* input */
+
 input {
-    width: 250px;
-    padding: 1rem;
+    width: 520px;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+    direction: rtl;
+    border: none;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
