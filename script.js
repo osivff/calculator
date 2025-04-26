@@ -37,14 +37,35 @@ buttons.addEventListener('click', (e) => {
 
     if(e.target.tagName === 'BUTTON' && attribute === 'number'){
         input.value += e.target.innerText;
-    } 
+    }
 });
 
 buttons.addEventListener('click', (e) => {
     let attribute = e.target.getAttribute('class');
-    
-    if(e.target.tagName === 'BUTTON' && attribute === 'orange'){
-        number.push(Number(input.value));
-        input.value = '';
+    let tagName = e.target.tagName;
+    let innerText = e.target.innerText;
+    let lastChar = input.value[input.value.length - 1];
+
+
+    if(tagName === 'BUTTON' && innerText === '+' && input.value != 0){
+        if(!isNaN(lastChar)){
+            input.value += innerText;
+        }
+    } else if (innerText === '÷' && input.value != 0){
+        if(!isNaN(lastChar)){
+            input.value += innerText;
+        }
+    } else if (innerText === '×' && input.value != 0){
+        if(!isNaN(lastChar)){
+            input.value += innerText;
+        }
+    } else if (innerText === '−' && input.value != 0){
+        if(!isNaN(lastChar)){
+            input.value += innerText;
+        }
+    } else if (innerText === '.' && input.value != 0){
+        if(!isNaN(lastChar)){
+            input.value += innerText;
+        }
     }
-});
+})
