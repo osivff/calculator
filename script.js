@@ -1,7 +1,6 @@
 const input = document.querySelector('.input-field');
 const buttons =  document.querySelector('table');
 const display = document.querySelector('.display');
-let span = document.createElement('span');
 
 let currentValue = '';
 let operator = '';
@@ -61,7 +60,7 @@ let handleOperatorClick = buttons.addEventListener('click', (e) => {
             if(savedValue === null){
                 savedValue = Number(currentValue);
                 currentValue = '';
-            } else if(savedValue !== ''){
+            } else if(currentValue !== ''){
                 savedValue = Number(savedValue) * Number(currentValue);
                 currentValue = '';
             }
@@ -92,27 +91,11 @@ let handleEqualClick = buttons.addEventListener('click', (e) => {
     let numTwo = Number(currentValue);
 
     if(innerText === '=' && input.value != 0){
-        if(operator === '+'){
-            input.value = `${operate(operator ,numOne, numTwo)}`;
-            savedValue = operate(operator ,numOne, numTwo);
-            currentValue = '';
-            operator = '';
-        } else if(operator === '−'){
-            input.value = `${operate(operator ,numOne, numTwo)}`;
-            savedValue = operate(operator ,numOne, numTwo);
-            currentValue = '';
-            operator = '';
-        } else if(operator === '×'){
-            input.value = `${operate(operator ,numOne, numTwo)}`;
-            savedValue = operate(operator ,numOne, numTwo);
-            currentValue = '';
-            operator = '';
-        } else if(operator === '÷'){
-            input.value = `${operate(operator ,numOne, numTwo)}`;
-            savedValue = operate(operator ,numOne, numTwo);
-            currentValue = '';
-            operator = '';
-        }
+        const result = operate(operator, numOne, numTwo);
+        input.value = `${result}`;
+        currentValue = '';
+        savedValue = result;
+        operator = '';
     }
 })
 
