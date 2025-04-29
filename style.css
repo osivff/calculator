@@ -9,9 +9,9 @@ body {
 }
 
 main {
-    width: 350px;
+    width: 600px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding-top: 7rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
