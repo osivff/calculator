@@ -4,7 +4,6 @@ A simple, functional calculator built with HTML, CSS, and JavaScript. This proje
 
 ## 🚀 Features
 
-- Responsive design
 - Clean and intuitive user interface
 - Basic arithmetic operations
 - Clear and delete functions
@@ -24,6 +23,7 @@ A simple, functional calculator built with HTML, CSS, and JavaScript. This proje
 - Keyboard Support
 - History Log
 - Advance Operations
+- Order of Operations
 
 ## 🙌 Acknowledgements
 
