@@ -24,6 +24,7 @@ A simple, functional calculator built with HTML, CSS, and JavaScript. This proje
 - History Log
 - Advance Operations
 - Order of Operations
+- Square roots
 
 ## 🙌 Acknowledgements
 
